@@ -1,0 +1,13 @@
+
+
+<h3>Length : {{numbers.length}}</h3>
+{{numbers}}
+
+<!-- for( int i : numbers){} -->
+
+<ul>
+    <li *ngFor="let anything of numbers">{{anything}}</li>
+</ul>
+
+<h2 *ngIf="numbers.length<1" >No Data</h2>
+
