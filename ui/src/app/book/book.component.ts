@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
@@ -14,9 +14,16 @@ export class BookComponent implements OnInit {
   isGreen = true
   
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  addBooks(){
+   
+    console.log("addBooks button clicked!!")
+    // Take user to /add-books url
+    this.router.navigateByUrl('/add-books')
   }
 
 }

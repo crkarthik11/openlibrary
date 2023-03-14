@@ -1,0 +1,32 @@
+<div style="padding-left: 100px;">
+    <h1> Add Books</h1>
+
+<form [formGroup]="booksForm">
+<label>Title</label>
+<input type="text" formControlName="titles" >
+
+<label>Author</label>
+<input type="text" formControlName="author">
+
+<label>ISBN</label>
+<input type="text" formControlName="isbn">
+
+<label>No Of Copies</label>
+<input type="number" formControlName="copies">
+
+<div *ngIf="booksForm.valid">
+    <input type="submit" value="Save Book">
+
+</div>
+
+</form>
+</div>
+
+<h3> Form status: {{booksForm.valid}}</h3>
+<h3> Form json: {{booksForm.value | json}}</h3>
+
+<form [formGroup]="booksForm3">
+    <label>Title</label>
+    <input type="text" formControlName="titles" >
+    
+    </form>

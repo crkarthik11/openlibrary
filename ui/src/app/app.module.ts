@@ -10,7 +10,9 @@ import { StudentsComponent } from './students/students.component';
 import { AuthorComponent } from './author/author.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
-
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { AddBooksComponent } from './add-books/add-books.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +22,14 @@ import { HomeComponent } from './home/home.component';
     StudentsComponent,
     AuthorComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    AddAdminComponent,
+    AddBooksComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

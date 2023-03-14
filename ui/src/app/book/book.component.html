@@ -3,7 +3,7 @@
 
 <h2 *ngIf="books.length<1">No Data</h2>
 <div style= "margin: 20px; float:right">
-  <button class="button"> Add Book</button>
+  <button class="button" (click)="addBooks()"> Add Book</button>
 </div>
 <table >
     <thead>
