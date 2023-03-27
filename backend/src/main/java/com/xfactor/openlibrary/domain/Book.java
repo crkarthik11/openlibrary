@@ -17,7 +17,7 @@ public class Book {
     private Long id;
 
     @Column
-    private String name;
+    private String title;
 
     @Column
     private String author;
@@ -26,7 +26,22 @@ public class Book {
     private String isbn;
 
     @Column
-    private String publication;
+    private String publication_date;
+
+    @Column
+    private String publisher;
+
+    @Column
+    private int copies;
+
+    @Column
+    private String category;
+
+    @Column
+    private String genre;
+
+    @Column
+    private String subgenre;
 
     public Long getId() {
         return id;
@@ -36,12 +51,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -60,12 +75,52 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getPublication() {
-        return publication;
+    public String getPublication_date() {
+        return publication_date;
     }
 
-    public void setPublication(String publication) {
-        this.publication = publication;
+    public void setPublication_date(String publication_date) {
+        this.publication_date = publication_date;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public int getCopies() {
+        return copies;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getSubgenre() {
+        return subgenre;
+    }
+
+    public void setSubgenre(String subgenre) {
+        this.subgenre = subgenre;
     }
 
 }
