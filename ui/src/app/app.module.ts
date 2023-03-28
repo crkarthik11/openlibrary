@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { AddBooksComponent } from './add-books/add-books.component';
+import { HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { AddBooksComponent } from './add-books/add-books.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

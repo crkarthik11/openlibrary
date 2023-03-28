@@ -5,33 +5,35 @@
 <div style= "margin: 20px; float:right">
   <button class="button" (click)="addBooks()"> Add Book</button>
 </div>
-<table >
-    <thead>
-      <tr>
-        <!-- <th>ID</th> -->
-        <th>Title</th>
-        <th>Author</th>
-        <th>ISBN</th>
-        <th>Publication Date</th>
-        <th>Publisher</th>
-        <th>Copies</th>
-        <th>Category</th>
-        <th>Genre</th>
-        <th>Subgenre</th>
-      </tr>
-    </thead>
-    <tbody *ngIf="books.length > 0">
-      <tr *ngFor="let book of books">
-        <!-- <td>{{book.id}}</td> -->
-        <td>{{book.title}}</td>
-        <td>{{book.author}}</td>
-        <td>{{book.isbn}}</td>
-        <td>{{book.publicationDate }}</td>
-        <td>{{book.publisher}}</td>
-        <td>{{book.copies}}</td>
-        <td>{{book.category }}</td>
-        <td>{{ book.genre }}</td>
-        <td>{{ book.subgenre }}</td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Publication Date</th>
+      <th>Publisher</th>
+      <th>Copies</th>
+      <th>Category</th>
+      <th>Genre</th>
+      <th>Subgenre</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.publication_date }}</td>
+      <td>{{ book.publisher }}</td>
+      <td>{{ book.copies }}</td>
+      <td>{{ book.category }}</td>
+      <td>{{ book.genre }}</td>
+      <td>{{ book.subgenre }}</td>
+      <td>
+        <button (click)="deleteBook(book.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
